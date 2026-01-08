@@ -8,7 +8,6 @@ import { auth } from "./firebase/firebaseConfig";
 import Signup from "./pages/signup";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
-// import EditProfile from "./pages/editprofile";
 
 
 function App() {
@@ -41,9 +40,59 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      {/* <Route path="/edit-profile" element={<EditProfile />} /> */}
     </Routes>
   );
 }
 
 export default App;
+
+
+
+
+// import { useEffect, useState } from "react";
+// import { onAuthStateChanged } from "firebase/auth";
+// import { Routes, Route, Navigate } from "react-router-dom";
+// import { auth } from "./firebase/firebaseConfig";
+
+// import Signup from "./pages/signup.jsx";
+// import Login from "./pages/login.jsx";
+// import Dashboard from "./pages/dashboard.jsx";
+
+// function App() {
+//   const [user, setUser] = useState(null);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const unsub = onAuthStateChanged(auth, (currentUser) => {
+//       setUser(currentUser);
+//       setLoading(false);
+//     });
+//     return () => unsub();
+//   }, []);
+
+//   if (loading) {
+//     return <h2 style={{ padding: "40px" }}>Loading...</h2>;
+//   }
+
+//   return (
+//     <Routes>
+//       {/* Public routes */}
+//       <Route
+//         path="/login"
+//         element={!user ? <Login /> : <Navigate to="/" />}
+//       />
+//       <Route
+//         path="/signup"
+//         element={!user ? <Signup /> : <Navigate to="/" />}
+//       />
+
+//       {/* Protected route */}
+//       <Route
+//         path="/"
+//         element={user ? <Dashboard /> : <Navigate to="/login" />}
+//       />
+//     </Routes>
+//   );
+// }
+
+// export default App;

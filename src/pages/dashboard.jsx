@@ -5,6 +5,7 @@ import { auth, db } from "../firebase/firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { setDoc } from "firebase/firestore";
 import Leaderboard from "./leaderboard";
+
 import {
   doc,
   getDoc,
@@ -25,7 +26,7 @@ function Dashboard() {
   const [solvedQuestions, setSolvedQuestions] = useState([]);
   const [activePlatform, setActivePlatform] = useState(null);
   const [leaderboard, setLeaderboard] = useState([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   
 
@@ -218,31 +219,7 @@ const leaderboardData = batchUsers.map(u => {
 />
 
           <p style={{ fontSize: "12px" }}>Change Photo</p>
-          {/* <input
-  type="text"
-  placeholder="Paste image URL & press Enter"
-  onKeyDown={(e) => {
-    if (e.key === "Enter") {
-      updatePhotoURL(e.target.value);
-      e.target.value = "";
-    }
-  }}
-  style={{
-    width: "160px",
-    fontSize: "12px",
-    marginTop: "6px"
-  }}
-/> */}
-
-{/* <button
-  onClick={() => navigate("/edit-profile")}
-  style={{ marginTop: "8px" }}
->
-Edit Profile
-</button> */}
-
-
-
+     
           <button onClick={() => signOut(auth)}>Logout</button>
         </div>
       </div>
