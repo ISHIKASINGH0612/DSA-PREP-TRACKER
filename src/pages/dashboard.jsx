@@ -189,6 +189,10 @@ const leaderboardData = batchUsers.map(u => {
           display: "flex",
           justifyContent: "space-between",
           marginBottom: "30px",
+          backgroundColor: "#3c0d86ff",
+          color: "white",
+          padding: "20px",
+          borderRadius: "10px",
         }}
       >
         <div>
@@ -219,13 +223,13 @@ const leaderboardData = batchUsers.map(u => {
 />
 
           <p style={{ fontSize: "12px" }}>Change Photo</p>
-     
-          <button onClick={() => signOut(auth)}>Logout</button>
+
+          <button style={{ color: "white", backgroundColor:"#2e0b67ff", border: "none", padding: "10px 20px", borderRadius: "5px" }} onClick={() => signOut(auth)}>Logout</button>
         </div>
       </div>
 
       {/* Platform Cards */}
-      <div style={{ display: "flex", gap: "20px" }}>
+      <div style={{ display: "flex", gap: "20px", backgroundColor: "#3c0d86ff", padding: "20px", color: "white", alignContent:"center"}}>
         <PlatformCard
           name="LeetCode"
           count={leetcodeCount}
@@ -249,13 +253,13 @@ const leaderboardData = batchUsers.map(u => {
         />
       </div>
 
-      <h3 style={{ marginTop: "20px" }}>
+      <h3 style={{ marginTop: "20px", backgroundColor: "#3c0d86ff", color: "white", padding: "10px" }}>
         Total Questions Solved: {totalCount}
       </h3>
 
       {activePlatform && (
   <>
-    <h3 style={{ marginTop: "30px" }}>
+    <h3 style={{ marginTop: "30px", backgroundColor: "#3c0d86ff", color: "white", padding: "10px" }}>
       {activePlatform.toUpperCase()} Questions
     </h3>
 
@@ -273,9 +277,9 @@ const leaderboardData = batchUsers.map(u => {
 
 
       {/* Add Question */}
-      <h3 style={{ marginTop: "30px" }}>Add Solved Question</h3>
+      <h3 style={{ marginTop: "30px" , backgroundColor: "#3c0d86ff", color: "white", padding: "10px" }}>Add Solved Question</h3>
 
-      <select
+      <select style={{ backgroundColor: "#3c0d86ff", color: "white", padding: "10px", borderRadius: "5px" }}
         value={platform}
         onChange={(e) => setPlatform(e.target.value)}
       >
@@ -288,7 +292,7 @@ const leaderboardData = batchUsers.map(u => {
       <br />
       <br />
 
-      <input
+      <input style={{ backgroundColor: "#3c0d86ff", color: "white", padding: "10px", borderRadius: "5px" }}
         type="text"
         placeholder="Question Name"
         value={question}
@@ -298,7 +302,7 @@ const leaderboardData = batchUsers.map(u => {
       <br />
       <br />
 
-      <button onClick={handleAddQuestion}>Add Question</button>
+      <button  style={{ backgroundColor: "#3c0d86ff", color: "white", padding: "10px", borderRadius: "5px" }} onClick={handleAddQuestion}>Add Question</button>
       <Leaderboard leaderboard={leaderboard} />
     </div>
   );
@@ -322,6 +326,8 @@ function PlatformCard({
         borderRadius: "10px",
         width: "180px",
         textAlign: "center",
+        backgroundColor: "#3c0d86ff", 
+        color: "white"
       }}
     >
       <h4>{name}</h4>
@@ -352,6 +358,8 @@ function SolvedCard({ question, onDelete }) {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        backgroundColor: "#3c0d86ff",
+         color: "white"
       }}
     >
       <span>{question}</span>
@@ -364,6 +372,7 @@ function SolvedCard({ question, onDelete }) {
           border: "none",
           padding: "4px 8px",
           cursor: "pointer",
+
         }}
       >
         ❌

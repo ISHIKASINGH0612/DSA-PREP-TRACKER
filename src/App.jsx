@@ -8,7 +8,7 @@ import { auth } from "./firebase/firebaseConfig";
 import Signup from "./pages/signup";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
-
+import "./App.css";
 
 function App() {
   const [user, setUser] = useState(null);

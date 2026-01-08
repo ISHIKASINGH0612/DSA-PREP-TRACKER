@@ -18,7 +18,7 @@ function Login({ goToSignup }) {
   };
 
   return (
-    <div style={{ padding: "40px" }}>
+    <div style={{ padding: "40px", backgroundColor: "#3c0d86ff", color: "white", maxWidth: "400px", margin: "40px auto" }}>
       <h2>Login</h2>
 
       <form onSubmit={handleLogin}>
@@ -54,61 +54,4 @@ function Login({ goToSignup }) {
 }
 
 export default Login;
-
-// import { useState } from "react";
-// import { signInWithEmailAndPassword } from "firebase/auth";
-// import { auth } from "../firebase/firebaseConfig";
-// import { useNavigate } from "react-router-dom";
-
-// function Login() {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const navigate = useNavigate();
-
-//   const handleLogin = async (e) => {
-//     e.preventDefault();
-//     try {
-//       await signInWithEmailAndPassword(auth, email, password);
-//     } catch (error) {
-//       alert(error.message);
-//     }
-//   };
-
-//   return (
-//     <div style={{ padding: "40px" }}>
-//       <h2>Login</h2>
-
-//       <form onSubmit={handleLogin}>
-//         <input
-//           type="email"
-//           placeholder="Email"
-//           value={email}
-//           onChange={(e) => setEmail(e.target.value)}
-//           required
-//         />
-//         <br /><br />
-
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           value={password}
-//           onChange={(e) => setPassword(e.target.value)}
-//           required
-//         />
-//         <br /><br />
-
-//         <button type="submit">Login</button>
-//       </form>
-
-//       <p style={{ marginTop: "10px" }}>
-//         New user?{" "}
-//         <button onClick={() => navigate("/signup")}>
-//           Signup here
-//         </button>
-//       </p>
-//     </div>
-//   );
-// }
-
-// export default Login;
 
