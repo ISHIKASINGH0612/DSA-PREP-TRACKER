@@ -234,12 +234,12 @@ const leaderboardData = batchUsers.map(u => {
   }}
 /> */}
 
-<button
+{/* <button
   onClick={() => navigate("/edit-profile")}
   style={{ marginTop: "8px" }}
 >
-  Edit Profile
-</button>
+Edit Profile
+</button> */}
 
 
 

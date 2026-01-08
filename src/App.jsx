@@ -41,7 +41,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/edit-profile" element={<EditProfile />} />
+      {/* <Route path="/edit-profile" element={<EditProfile />} /> */}
     </Routes>
   );
 }
