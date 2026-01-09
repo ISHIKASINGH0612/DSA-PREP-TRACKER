@@ -1,8 +1,32 @@
-/* #root {
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  background-color: rgb(21, 5, 48);
-  color: white;
+/* Global reset (safe with Bootstrap) */
+* {
+  box-sizing: border-box;
 }
- */
+
+/* Remove default body margin */
+body {
+  margin: 0;
+  background-color: #faf9f8; /* Bootstrap light gray */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Anchor cleanup */
+a {
+  text-decoration: none;
+}
+
+/* Button focus outline soft */
+button:focus {
+  box-shadow: none !important;
+}
+
+/* Optional: smooth UI feel */
+.card {
+  border-radius: 12px;
+}
+
+/* Optional: smooth hover */
+.btn:hover {
+  opacity: 0.95;
+}
