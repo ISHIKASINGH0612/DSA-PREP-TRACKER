@@ -8,6 +8,7 @@ import { auth } from "./firebase/firebaseConfig";
 import Signup from "./pages/signup";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
+import Entry from "./pages/entry";
 import "./App.css";
 
 function App() {
@@ -27,14 +28,21 @@ function App() {
     return <h2 style={{ padding: "40px" }}>Loading...</h2>;
   }
 
-  // ❌ user not logged in
   if (!user) {
-    return showSignup ? (
-      <Signup goToLogin={() => setShowSignup(false)} />
-    ) : (
-      <Login goToSignup={() => setShowSignup(true)} />
+  if (!showSignup) {
+    return (
+      <Entry
+        goToLogin={() => setShowSignup(false)}
+        goToSignup={() => setShowSignup(true)}
+      />
     );
   }
+
+  return (
+    <Signup goToLogin={() => setShowSignup(false)} />
+  );
+}
+
 
   // ✅ user logged in → ROUTES
   return (
