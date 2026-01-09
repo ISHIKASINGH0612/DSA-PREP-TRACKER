@@ -36,7 +36,8 @@ function Signup() {
   };
 
   return (
-    <div style={{ padding: "40px", backgroundColor: "#3c0d86ff", color: "white", maxWidth: "400px", margin: "40px auto" }}>
+    // <div style={{ padding: "40px", backgroundColor: "#3c0d86ff", color: "white", maxWidth: "400px", margin: "40px auto" }}>
+    <div >
       <h2>Signup</h2>
 
       <form onSubmit={handleSubmit}>

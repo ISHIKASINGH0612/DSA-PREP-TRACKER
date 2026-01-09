@@ -18,7 +18,8 @@ function Login({ goToSignup }) {
   };
 
   return (
-    <div style={{ padding: "40px", backgroundColor: "#3c0d86ff", color: "white", maxWidth: "100%", margin: "40px auto" }}>
+    // <div style={{ padding: "40px", backgroundColor: "#3c0d86ff", color: "white", maxWidth: "100%", margin: "40px auto" }}>
+     <div >
       <h2>Login</h2>
 
       <form onSubmit={handleLogin}>
